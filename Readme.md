@@ -49,6 +49,6 @@ This repository is licensed under the MIT License. See the [LICENSE](LICENSE) fi
 **Author**
 ---------
 
-This repository was created by [Dhananjay](https://github.com/dhan-profile).
+This repository was created by [Dhanush](https://github.com/dhan-profile).
 
 I hope this helps! Let me know if you need any further assistance.
