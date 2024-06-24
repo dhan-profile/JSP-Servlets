@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<!-- CSS code -->
+<style type="text/css">
+.hello {
+	background-color: white;
+}
+</style>
+<!-- JavaScript code -->
+<script type="text/javascript">
+	function myFunction() {
+		var uname = document.getElementById("user").value;
+		var pwd = document.getElementById("pass").value;
+		console.log(uname+" "+pwd);
+		
+		if(uname == ""){
+			alert("Please enter the username");
+			return false;
+		}
+		if(pwd == ""){
+			alert("Please enter the password");
+			return false;
+		}
+	}
+</script>
+</head>
+<body Class="hello">
+	<h1 align="center">Login Form</h1>
+	<form action="welcome.html" onsubmit="return myFunction()">
+		<table align="center">
+		<tr>
+		<td>Username</td>
+		<td><input type="text" id="user"></td>
+		</tr>
+		<tr>
+		<td>Password</td>
+		<td><input type="password" id="pass"></td>
+		</tr>
+		<tr>
+		<td><a href="register.html">Sign Up</a></td>
+		<td><input type="submit"></td>
+		</tr>
+		</table>
+	</form>
+</body>
+</html>
