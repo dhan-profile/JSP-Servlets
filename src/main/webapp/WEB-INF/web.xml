@@ -9,4 +9,12 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+<!--   <servlet> -->
+<!--   <servlet-name>Validation</servlet-name> -->
+<!--   <servlet-class>webLayer.Validation</servlet-class> -->
+<!--   </servlet> -->
+<!--   <servlet-mapping> -->
+<!--   <servlet-name>Validation</servlet-name> -->
+<!--   <url-pattern>/Validation</url-pattern> -->
+<!--   </servlet-mapping> -->
 </web-app>
