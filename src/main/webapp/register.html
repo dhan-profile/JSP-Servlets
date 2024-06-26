@@ -11,45 +11,63 @@
 </style>
 <!-- JavaScript code -->
 <script type="text/javascript">
-	function myFunction() {
-		var uname = document.getElementById("user").value;
-		var pwd = document.getElementById("pass").value;
-		console.log(uname+" "+pwd);
-		
-		if(uname == ""){
-			alert("Please enter the username");
-			return false;
-		}
-		if(pwd == ""){
-			alert("Please enter the password");
-			return false;
-		}
-	}
+function myFunction() {
+    var uname = document.getElementById("user").value.trim();
+    var pwd = document.getElementById("pass").value.trim();
+    var cpwd = document.getElementById("cpass").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var email = document.getElementById("mail").value.trim();
+
+    console.log(uname + " " + pwd + " " + cpwd + " " + phone + " " + email);
+
+    if (uname == "") {
+        alert("Please enter the username");
+        return false;
+    }
+    if (pwd == "") {
+        alert("Please enter the password");
+        return false;
+    }
+    if (cpwd == "") {
+        alert("Please enter the confirm password");
+        return false;
+    }
+    if (pwd != cpwd) {
+        alert("Password and confirm password do not match");
+        return false;
+    }
+    return true;
+}
+
 </script>
 </head>
 <body Class="hello">
 	<h1 align="center">Register Form</h1>
-	<form action="index.html" onsubmit="return myFunction()">
+	<form action="AddUserDetails" onsubmit="return myFunction()" method="post">
 		<table align="center">
 		<tr>
 		<td>Username</td>
-		<td><input type="text" id="user"></td>
+		<td><input type="text" id="user" name="regname"></td>
 		</tr>
 		<tr>
 		<td>Password</td>
-		<td><input type="password" id="pass"></td>
+		<td><input type="password" id="pass" name="regpass"></td>
+		</tr>
+		<tr>
+		<td>Confirm Password</td>
+		<td><input type="password" id="cpass" name="regcpass"></td>
 		</tr>
 		<tr>
 		<td>Phone</td>
-		<td><input type="number" id="phone"></td>
+		<td><input type="text" id="phone" name="regphone"></td>
 		</tr>
 		<tr>
 		<td>Email</td>
-		<td><input type="email" id="mail"></td>
+		<td><input type="email" id="mail" name="regmail"></td>
 		</tr>
 		<tr>
 		<td></td>
-		<td><input type="submit" onsubmit="myFunction()"></td>
+		<td><input type="submit"></td>
 		</tr>
 		</table>
 	</form>

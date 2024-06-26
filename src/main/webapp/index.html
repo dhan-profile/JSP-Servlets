@@ -12,8 +12,8 @@
 <!-- JavaScript code -->
 <script type="text/javascript">
 	function myFunction() {
-		var uname = document.getElementById("user").value;
-		var pwd = document.getElementById("pass").value;
+		var uname = document.getElementById("user").value.trim();
+		var pwd = document.getElementById("pass").value.trim();
 		console.log(uname+" "+pwd);
 		
 		if(uname == ""){
@@ -29,15 +29,15 @@
 </head>
 <body Class="hello">
 	<h1 align="center">Login Form</h1>
-	<form action="welcome.html" onsubmit="return myFunction()">
+	<form action="Validation" onsubmit="return myFunction()" method="get">
 		<table align="center">
 		<tr>
 		<td>Username</td>
-		<td><input type="text" id="user"></td>
+		<td><input type="text" id="user" name="user"></td>
 		</tr>
 		<tr>
 		<td>Password</td>
-		<td><input type="password" id="pass"></td>
+		<td><input type="password" id="pass" name="pass"></td>
 		</tr>
 		<tr>
 		<td><a href="register.html">Sign Up</a></td>
