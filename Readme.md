@@ -52,3 +52,20 @@ This repository is licensed under the MIT License. See the [LICENSE](LICENSE) fi
 This repository was created by [Dhanush](https://github.com/dhan-profile).
 
 I hope this helps! Let me know if you need any further assistance.
+
+## NOTE
+
+![Servlets+JSP_page-0001](https://github.com/dhan-profile/JSP-Servlets/assets/29054766/cbeb3806-6fa2-4745-b374-565b9c821ab2)
+
+![Servlets+JSP_page-0002](https://github.com/dhan-profile/JSP-Servlets/assets/29054766/dc5ea6af-56a5-4b22-835a-b79813f0b65b)
+
+![Servlets+JSP_page-0003](https://github.com/dhan-profile/JSP-Servlets/assets/29054766/87e952e3-c0dc-430e-bf40-0c3fefad077d)
+
+![Servlets+JSP_page-0004](https://github.com/dhan-profile/JSP-Servlets/assets/29054766/0eaffa51-3363-4ee1-b105-d9aeccceb780)
+
+![Servlets+JSP_page-0005](https://github.com/dhan-profile/JSP-Servlets/assets/29054766/622ee76b-258d-4310-b6f0-76f0ed284772)
+
+![Servlets+JSP_page-0006](https://github.com/dhan-profile/JSP-Servlets/assets/29054766/92cb37cc-d5a7-4de7-ace8-7c47f93c3e06)
+
+![Servlets+JSP_page-0007](https://github.com/dhan-profile/JSP-Servlets/assets/29054766/1e68d790-662d-4b68-bf1c-b1e8cbeaf14a)
+
