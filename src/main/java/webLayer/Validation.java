@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,6 +21,7 @@ public class Validation extends HttpServlet {
 //	request Object contains request received from client, response Object contains response to be sent to client 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html");
 		String clientuser = request.getParameter("user");
 		String clientpass = request.getParameter("pass");
 		
@@ -32,20 +34,30 @@ public class Validation extends HttpServlet {
 				ResultSet rs = stmt.executeQuery("select * from register;");
 								
 				if(clientuser.equals("admin") && clientpass.equals("admin123")) {
-					out.println("\n WELCOME ADMIN!"); 
-					while(rs.next()) {
-		                out.println("\n" +rs.getString("username") + "\t" + rs.getString("phone") + "\t" + rs.getString("mail"));
-					}
+//					out.println("\n WELCOME ADMIN!"); 
+//					while(rs.next()) {
+//		                out.println("\n" +rs.getString("username") + "\t" + rs.getString("phone") + "\t" + rs.getString("mail"));
+//					}
+//					RequestDispatcher - Redirecting request to another server
+					RequestDispatcher rd = request.getRequestDispatcher("admin.html");
+					rd.forward(request, response);
 				} else {
 				while(rs.next()) {
 					String dbuser = rs.getString("username");
 					String dbpass = rs.getString("password");
-					String dbphone = rs.getString("phone");
-	                String dbmail = rs.getString("mail");
+//					String dbphone = rs.getString("phone");
+//	                String dbmail = rs.getString("mail");
 					if(clientuser.equals(dbuser) && clientpass.equals(dbpass)) {
 					out.println("\n WELCOME USER!"); 
-	                out.println("\n" +dbuser + "\n" + dbphone + "\n" + dbmail);
+//	                out.println("\n" +dbuser + "\n" + dbphone + "\n" + dbmail);
+	                RequestDispatcher rd = request.getRequestDispatcher("user.html");
+	                rd.forward(request, response);
 	                break;
+					} else {
+						out.println("Sorry, Username or password incorrect");
+						RequestDispatcher rd = request.getRequestDispatcher("index.html");
+						rd.include(request, response);
+						break;
 					}
 				}
 				}
